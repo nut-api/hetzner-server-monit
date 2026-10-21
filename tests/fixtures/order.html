@@ -1,0 +1,2215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="title" content="Hetzner Online GmbH - Robot" />
+<meta name="description" content="Administration interface for Dedicated Server and domains" />
+<meta name="keywords" content="hetzner,robot,server,domain" />
+<meta name="language" content="en" />
+<meta name="robots" content="index, follow" />
+  <title>Hetzner Online GmbH - Robot</title>
+  <script type="text/javascript" src="/js/vendors.js?1765264298"></script>
+<script type="text/javascript" src="/js/index.js?1779258467"></script>
+<script type="text/javascript" src="/js/jquery-ui.min.js?1503907242"></script>
+<script type="text/javascript" src="/js/jquery-ui-touch-punch.js?1503907242"></script>
+<script type="text/javascript" src="/js/select2/select2.full.min.js?1733122816"></script>
+<script type="text/javascript" src="/js/select2/de.js?1593602999"></script>
+<script type="text/javascript" src="/js/select2/en.js?1733122816"></script>
+<script type="text/javascript" src="/js/status.js?1791448617"></script>
+<script type="text/javascript" src="/js/robot.js?1789545188"></script>
+  <link rel="shortcut icon" href="/favicon.ico" />
+
+
+  <!-- Include CSS-Files -->
+    <link rel="stylesheet" type="text/css" href="/css/jquery-ui.min.css?v=1503907242" />
+    <link rel="stylesheet" type="text/css" href="/css/select2.min.css?v=1593605323" />
+    <link rel="stylesheet" type="text/css" href="/css/flag-icons.min.css?v=1733122816" />
+    <link rel="stylesheet" type="text/css" href="/css/vendors.css?v=1765264298" />
+    <link rel="stylesheet" type="text/css" href="/css/index.css?v=1738751784" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css?v=1791448617" />
+    <link rel="stylesheet" type="text/css" href="/css/buttons.css?v=1733122816" />
+
+  <script type="application/javascript">
+    window.userCulture = "en_GB";
+    window.clientNumber = "";
+  </script>
+        <!-- Matomo -->
+    <script>
+      var _paq = window._paq = window._paq || [];
+      _paq.push(['setDocumentTitle', document.domain + " / " + document.title]);
+      _paq.push(['setCookieDomain', '*.hetzner.com']);
+      _paq.push(['setDomains', '*.hetzner.com']);
+      _paq.push(['requireCookieConsent']);
+      _paq.push(['setConversionAttributionFirstReferrer', true]);
+      _paq.push(['setCustomUrl', 'https://www.hetzner.com/~/robot.hetzner.com' + window.location.pathname]);
+            _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      _paq.push(['enableHeartBeatTimer',15]);
+      (function() {
+        var u="https://use.hetzner.com/";
+        _paq.push(['setTrackerUrl', u+'meck']);
+        _paq.push(['setSiteId', '8']);
+        var d=document, g=d.createElement('script'),
+          s=d.getElementsByTagName('script')[0];g.async=true; g.src=u+'heck.js';
+        s.parentNode.insertBefore(g,s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+  </head>
+<body class="vh-100 bg-gray-200">
+<noscript>
+  <main>
+    <section class="main-content">
+      <div class="inner-content">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12">
+              <div class="container-no-js">
+                <p><i class="fa fa-4x fa-exclamation-triangle icon-no-js"></i></p>
+                <h2>Activate JavaScript</h2>
+                <p>Please activate JavaScript in your browser and refresh this page. This platform will only perform optimally once JavaScript is activated. You can find a quick guide for how to activate JavaScript <a href="https://www.enable-javascript.com/" target="_blank" rel="noopener" class="link-single-external">here</a>.
+                </p>
+                <a class="btn btn-sm btn-black" href="https://robot.hetzner.com"><i class="fa fa-refresh"></i> Refresh the page</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</noscript>
+
+<div class="document-root">
+  <!--Start of Top Navbar-->
+  <!--Start of Top Navbar-->
+<nav class="sticky-top py-0 shadow-sm main-navbar navbar navbar-expand navbar-light bg-white d-flex justify-content-between top-bar" style="z-index: 10000">
+  <hr id="button-separator">
+  <a aria-current="page" class="d-flex align-items-center mr-0 py-0 mr-4 border-right-1 link-unstyled shadow-none top-bar-left logo-area"
+     href="/">
+    <img src="/media/logo.svg" alt="Logo Hetzner Online GmbH" class="d-none d-md-block" style="height: 21px">
+    <div class="bg-red d-flex align-items-center justify-content-center d-md-none"
+         style="height: 64px; width: 64px;">
+      <img src="/media/logo-short.svg" alt="Logo Hetzner Online GmbH" style="height: 34px">
+    </div>
+    <span class="ml-2 h5 mb-0">Robot</span>
+  </a>
+
+  <div class="d-flex flex-row top-bar-right">
+    
+<div class="lang-switch">
+  <div class="lang-btn">
+    <i class="fi fi-en"></i>
+    <span class="divider"></span>
+    <span>EUR</span>
+    <span class="divider"></span>
+    <span>VAT 19 %</span>
+  </div>
+
+          <div class="lang-settings">
+      <div class="lang-settings-close-btn-wrapper">
+        <div class="lang-settings-close-btn"></div>
+      </div>
+      <div class="lang-headline">Choose your location settings</div>
+
+                  <form class="lang-settings-form" method="post" action="/order">
+
+                  <div class="lang-settings-category">
+            <div class="category-headline"><label for="culture">Language</label></div>
+            <div class="lang-settings-radio">
+              <ul class="radio_list"><li><input name="culture" type="radio" value="de_DE" id="culture_de_DE" />&nbsp;<label for="culture_de_DE">German</label></li>
+<li><input name="culture" type="radio" value="en_GB" id="culture_en_GB" checked="checked" />&nbsp;<label for="culture_en_GB">English</label></li></ul>            </div>
+          </div>
+                  <div class="lang-settings-category">
+            <div class="category-headline"><label for="currency">Currency</label></div>
+            <div class="lang-settings-radio">
+              <ul class="radio_list"><li><input name="currency" type="radio" value="EUR" id="currency_EUR" checked="checked" />&nbsp;<label for="currency_EUR">EUR €</label></li>
+<li><input name="currency" type="radio" value="USD" id="currency_USD" />&nbsp;<label for="currency_USD">USD $</label></li></ul>            </div>
+          </div>
+                  <div class="lang-settings-category">
+            <div class="category-headline"><label for="country">Country (VAT)</label></div>
+            <div class="lang-settings-radio">
+              <select name="country" id="country">
+<option value="OTHER">All Others</option>
+<option value="AU">Australia</option>
+<option value="AT">Austria</option>
+<option value="BE">Belgium</option>
+<option value="BG">Bulgaria</option>
+<option value="HR">Croatia</option>
+<option value="CY">Cyprus</option>
+<option value="CZ">Czech Republic</option>
+<option value="DK">Denmark</option>
+<option value="EE">Estonia</option>
+<option value="FI">Finland</option>
+<option value="FR">France</option>
+<option value="DE" selected="selected">Germany</option>
+<option value="GR">Greece</option>
+<option value="HU">Hungary</option>
+<option value="IE">Ireland</option>
+<option value="IT">Italy</option>
+<option value="LV">Latvia</option>
+<option value="LT">Lithuania</option>
+<option value="LU">Luxembourg</option>
+<option value="MT">Malta</option>
+<option value="NL">Netherlands</option>
+<option value="NO">Norway</option>
+<option value="PL">Poland</option>
+<option value="PT">Portugal</option>
+<option value="RO">Romania</option>
+<option value="SG">Singapore</option>
+<option value="SK">Slovakia</option>
+<option value="SI">Slovenia</option>
+<option value="ZA">South Africa</option>
+<option value="ES">Spain</option>
+<option value="SE">Sweden</option>
+<option value="CH">Switzerland</option>
+<option value="UA">Ukraine</option>
+<option value="GB">United Kingdom</option>
+<option value="US">United States</option>
+</select>            </div>
+          </div>
+                <input type="hidden" name="_csrf_token" value="00000000000000000000000000000000" id="csrf_token" />        <a href="" class="btn btn-prio-1 save">
+          <div class="lang-settings-save-btn">
+            <div class="lang-settings-save-btn-icon"></div>
+            Save settings          </div>
+        </a>
+      </form>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    function showLocationSettingsForm() {
+      $('.lang-btn').css('background-color', '#EDEDED')
+      $('.lang-settings').css('display', 'flex');
+    }
+
+    function hideLocationSettingsForm() {
+      $('.lang-btn').css('background-color', 'transparent')
+      $('.lang-settings').css('display', 'none');
+    }
+
+    $(document).ready(() => {
+      const button = $('.lang-btn');
+      button.css('cursor', 'pointer');
+      button.on('click', (e) => {
+        e.preventDefault();
+
+        if ($('.lang-settings').css('display') === 'none') {
+          showLocationSettingsForm();
+        } else {
+          hideLocationSettingsForm();
+        }
+      });
+
+      $('.lang-settings-close-btn').on('click', (e) => {
+        e.preventDefault();
+        hideLocationSettingsForm();
+      });
+
+      
+      $('.lang-settings .save').on('click', (e) => {
+        e.preventDefault();
+
+        $('.lang-settings form').submit();
+      });
+
+      const formatOption = (state) => {
+        if (!state.id) {
+          return state.text;
+        }
+
+        const $state = $(
+          '<span><i></i> <span></span></span>'
+        );
+
+        $state.find('span').text(state.text);
+        $state.find('i').attr('class', 'fi fi-' + state.element.value.toLowerCase());
+
+        return $state;
+      }
+      $('select#country').select2({
+        dropdownParent: $('.lang-settings'),
+        language: 'en',
+        templateSelection: formatOption,
+        templateResult: formatOption,
+      })
+
+      $('.lang-settings ul.radio_list li').on('click', function (e) {
+        let $radioButton = $(this).find('input[type="radio"]');
+        if ($radioButton.length) {
+          $radioButton.prop('checked', true).trigger('change');
+        }
+      });
+
+      $(document).on('select2:open', () => {
+        document.querySelector('.select2-search__field').focus();
+      });
+    });
+  </script>
+
+      </div>
+</nav>
+<!--End of Top Navbar-->
+  <!--End of Top Navbar-->
+  <div class="position-relative d-flex" style="flex:1 1 100%">
+    <!--Start of menu -->
+    <style>
+  .text-black {
+    color: #383838 !important;
+  }
+</style>
+<div class="h-auto bg-white navbar-wrapper" style="z-index: 1000;">
+</div>
+    <!--End of menu -->
+    <div class="menu-overlay"></div>
+    <div class="d-flex flex-column justify-content-between layout-wrapper" style="flex:1 1 100%; overflow-x: auto;">
+      <main>
+        <section id="status-incidents">
+        </section>
+        <section>
+          <div class="container-fluid py-2">
+            <div class="row">
+              <div class="col-12">
+                
+          <h2>ORDERING</h2>
+
+                  </div>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="container-fluid py-2">
+            <div class="row">
+              <div class="col-12">
+                <div class="columns main-container">
+                  <!--Start of content -->
+                  
+  <script type="text/javascript">
+    $(document).ready(() => {
+      showLocationSettingsForm();
+    });
+  </script>
+
+
+<form id="order_1769" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product GEX430-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1769" /><input type="hidden" name="category" id="category" value="rootserver" /><input type="image" alt="Order Product GEX430-1" src="/images/gex430_robot_en.jpg" /></form>
+<p>Thank you for your interest in the products of Hetzner Online.</p>
+
+  <p>
+    If you are not a Hetzner client yet and want to take over a server from another Hetzner client, please use the <a href="/server/transferCreate">server transfer site</a>.  </p>
+
+<p>
+  If this order is intended to replace an existing server, please review <a onclick="var w=window.open(this.href);w.focus();return false;" href="https://docs.hetzner.com/robot/dedicated-server/general-information/root-server-upgrade">this important information</a>.</p>
+
+<p>
+  To view the current order status have a look at our <a onclick="var w=window.open(this.href);w.focus();return false;" href="https://docs.hetzner.com/general/others/order-processing">Order processing status site</a>.</p>
+
+
+<div id="0" class="box_wide"><table id="box_title_0" class="box_title_highlighted_no_hover"><tr><td class="title"><h2>Shopping cart</h2></td></tr></table><div class="box_content" id="content_0"><div style="clear: left; position:relative;" id="data_0"></div></div></div><script type="text/javascript">
+//<![CDATA[
+AjaxUpdater({"update":"data_0","url":"\/order\/cart","before":"getElementById(\u0027data_0\u0027).innerHTML = \u0027\u003Cdiv class=\u0022ajaxloader\u0022\u003E\u003Cimg src=\u0022\/images\/loader.gif\u0022 \/\u003E\u003C\\\/div\u003E\u0027;","loading":"jQuery(\u0027#ajaxloader\u0027).show()","complete":"jQuery(\u0027#ajaxloader\u0027).hide()","script":true});
+//]]>
+</script>
+<p><strong>We offer the following products:</strong></p>
+
+
+  
+  
+  
+
+
+
+
+  <div class='box_top'><table id='box_title_products_top' class='box_title_highlighted_no_hover box_title_no_hover'><tr><td class='title'>Top Offers</td></tr></table>
+                  
+              
+    <div id="1768" class="box_product"><table id="box_title_1768" class="box_title_no_hover"><tr><td class="title">Dedicated GPU-Server GEX45-1</td></tr></table><div class="box_content_product" id="content_1768"><div class='product_details'><ul class='list'><li class='list'>Intel® Core™ i5-13500 14 Core "Raptor Lake-S"</li><li class='list'>64 GB DDR4 RAM</li><li class='list'>2 x 512 GB NVMe SSD (Gen 3, Software RAID 1)</li><li class='list'>NVIDIA RTX™ 4000 SFF Blackwell Generation</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/gex45?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 254.66</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.4081</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 248.71</span></td>
+             </tr></table><hr /><form id="order_1768" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated GPU-Server GEX45-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1768" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                  
+              
+    <div id="1767" class="box_product"><table id="box_title_1767" class="box_title_no_hover"><tr><td class="title">Dedicated Server GEX63-1</td></tr></table><div class="box_content_product" id="content_1767"><div class='product_details'><ul class='list'><li class='list'>Intel® Core™ Ultra 7 265 20-Core "Arrow Lake"</li><li class='list'>128 GB DDR5 RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>NVIDIA RTX™ PRO 6000 Blackwell Max-Q</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/gex63?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 1,188.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.9051</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 1,188.81</span></td>
+             </tr></table><hr /><form id="order_1767" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server GEX63-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1767" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                  
+              
+    <div id="1769" class="box_product"><table id="box_title_1769" class="box_title_no_hover"><tr><td class="title">Dedicated GPU-Server GEX430-1</td></tr></table><div class="box_content_product" id="content_1769"><div class='product_details'><ul class='list'><li class='list'>Intel® Xeon® Gold 5412U 24-Core "Sapphire Rapids"</li><li class='list'>128 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>4x NVIDIA RTX™ PRO 6000 Blackwell Max-Q</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/gex430?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 4,282.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 6.8634</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 4,282.81</span></td>
+             </tr></table><hr /><form id="order_1769" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated GPU-Server GEX430-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1769" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>    </div>
+  <div style="clear:both;"></div>
+  <br>
+
+
+  
+  
+                  
+    <div id="products_rootserver" class="box_rootserver"><table id="box_title_products_rootserver" class="box_title_no_hover"><tr><td class="title">Dedicated Servers</td><td class="title toggle_all">
+      <a class="down" data-expand-label="Expand all" data-collapse-label="Collapse all" onclick="toggleAllProductLines(this)">
+        Expand all
+      </a>
+    </td></tr></table><div class="box_content_rootserver" id="content_products_rootserver">          <dl>
+            
+                                                      
+                                
+                                        <div class="sm_list liste" ><a name="server_auction" class='down' onclick="toggleFeature(jQuery(this),'content_productline_server_auction')"><dt><span class='title'>Server Auction</span></dt></a><div class="box_content_server_auction" style="display:none;" id="content_productline_server_auction">                              <blockquote id="msgbox" class="msgbox_info"><p>Bid on servers and save! In our server auction you will find used servers at reasonable prices. Bid for your server in the <a onclick="var w=window.open(this.href);w.focus();return false;" href="https://www.hetzner.com/sb?currency=EUR">server auction</a>.</p></blockquote>                                    
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                                                
+                                
+                      
+                  
+                  </div></div>              
+                                                      
+                                
+                                        <div class="sm_list liste" ><a name="dedicated_servers_ax_amd" class='down' onclick="toggleFeature(jQuery(this),'content_productline_dedicated_servers_ax_amd')"><dt><span class='title'>Dedicated Servers AX (AMD)</span></dt></a><div class="box_content_dedicated_servers_ax_amd" style="display:none;" id="content_productline_dedicated_servers_ax_amd">                                    
+                      <div id="1718" class="box_product"><table id="box_title_1718" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX41-1-LTD</td></tr></table><div class="box_content_product" id="content_1718"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen&trade; 5 3600 Hexa-Core "Matisse" (Zen2)</li><li class='list'>64 GB DDR4 RAM</li><li class='list'>2 x 512 GB NVMe SSD (Software-RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax41?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 70.21</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.1125</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 0.00</span></td>
+             </tr></table><hr /><form id="order_1718" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX41-1-LTD', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1718" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button' type='button' value='Not available' disabled='disabled'/></form></div></div>                                                            
+                                
+                      
+                      <div id="1719" class="box_product"><table id="box_title_1719" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX42-1</td></tr></table><div class="box_content_product" id="content_1719"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen™ 7 PRO 8700GE Octa-Core "Phoenix 1" (Zen4)</li><li class='list'>64 GB DDR5 RAM</li><li class='list'>2 x 512 GB NVMe SSD (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax42?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 117.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.1887</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 58.31</span></td>
+             </tr></table><hr /><form id="order_1719" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX42-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1719" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1720" class="box_product"><table id="box_title_1720" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX42-1-LTD</td></tr></table><div class="box_content_product" id="content_1720"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen™ 7 PRO 8700GE Octa-Core "Phoenix 1" (Zen4)</li><li class='list'>64 GB DDR5 RAM</li><li class='list'>2 x 512 GB NVMe SSD (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax42?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 94.01</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.1507</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 46.41</span></td>
+             </tr></table><hr /><form id="order_1720" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX42-1-LTD', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1720" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button' type='button' value='Not available' disabled='disabled'/></form></div></div>                                                            
+                                
+                      
+                      <div id="1759" class="box_product"><table id="box_title_1759" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX42-2</td></tr></table><div class="box_content_product" id="content_1759"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen™ 7 PRO 8700GE Octa-Core "Phoenix 1" (Zen4)</li><li class='list'>64 GB DDR5 ECC RAM</li><li class='list'>2 x 512 GB NVMe SSD (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax42?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 224.91</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.3605</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 111.86</span></td>
+             </tr></table><hr /><form id="order_1759" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX42-2', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1759" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1760" class="box_product"><table id="box_title_1760" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX42-2-LTD</td></tr></table><div class="box_content_product" id="content_1760"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen™ 7 PRO 8700GE Octa-Core "Phoenix 1" (Zen4)</li><li class='list'>64 GB DDR5 ECC RAM</li><li class='list'>2 x 512 GB NVMe SSD (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax42?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 147.56</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.2365</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 46.41</span></td>
+             </tr></table><hr /><form id="order_1760" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX42-2-LTD', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1760" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button' type='button' value='Not available' disabled='disabled'/></form></div></div>                                                            
+                                
+                      
+                      <div id="1721" class="box_product"><table id="box_title_1721" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX102-1</td></tr></table><div class="box_content_product" id="content_1721"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen&trade; 9 7950X3D 16-Core "Raphael" (Zen 4)</li><li class='list'>128 GB DDR5 RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax102?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 308.21</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.4939</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 153.51</span></td>
+             </tr></table><hr /><form id="order_1721" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX102-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1721" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1722" class="box_product"><table id="box_title_1722" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX102-2</td></tr></table><div class="box_content_product" id="content_1722"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen&trade; 9 7950X3D 16-Core "Raphael" (Zen 4)</li><li class='list'>192 GB ECC DDR5 RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax102?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 653.31</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.0470</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 326.06</span></td>
+             </tr></table><hr /><form id="order_1722" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX102-2', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1722" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1761" class="box_product"><table id="box_title_1761" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX102-3</td></tr></table><div class="box_content_product" id="content_1761"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen&trade; 9 7950X3D 16-Core "Raphael" (Zen 4)</li><li class='list'>128 GB DDR5 ECC RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax102?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 540.26</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.8657</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 266.56</span></td>
+             </tr></table><hr /><form id="order_1761" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX102-3', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1761" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1762" class="box_product"><table id="box_title_1762" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX102-3-LTD</td></tr></table><div class="box_content_product" id="content_1762"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen&trade; 9 7950X3D 16-Core "Raphael" (Zen 4)</li><li class='list'>128 GB DDR5 ECC RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax102?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 332.01</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.5320</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 46.41</span></td>
+             </tr></table><hr /><form id="order_1762" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX102-3-LTD', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1762" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button' type='button' value='Not available' disabled='disabled'/></form></div></div>                                                            
+                                
+                      
+                      <div id="1765" class="box_product"><table id="box_title_1765" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX102-4</td></tr></table><div class="box_content_product" id="content_1765"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen™ 9 7950X3D 16-Core "Raphael" (Zen 4)</li><li class='list'>128 GB DDR5 RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4)</li><li class='list'>2 x 7.68 TB NVMe SSD Datacenter Edition (Gen 4)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax102?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 903.21</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.4474</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 451.01</span></td>
+             </tr></table><hr /><form id="order_1765" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX102-4', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1765" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1724" class="box_product"><table id="box_title_1724" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX162-1</td></tr></table><div class="box_content_product" id="content_1724"><div class='product_details'><ul class='list'><li class='list'>AMD EPYC™ 9454P 48-Core "Genoa" (Zen4)</li><li class='list'>128 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 3.84 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax162?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 730.66</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.1710</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 361.76</span></td>
+             </tr></table><hr /><form id="order_1724" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX162-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1724" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1727" class="box_product"><table id="box_title_1727" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX162-1-LTD</td></tr></table><div class="box_content_product" id="content_1727"><div class='product_details'><ul class='list'><li class='list'>AMD EPYC™ 9454P 48-Core "Genoa" (Zen4)</li><li class='list'>128 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 3.84 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax162?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 379.61</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.6083</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 46.41</span></td>
+             </tr></table><hr /><form id="order_1727" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX162-1-LTD', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1727" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button' type='button' value='Not available' disabled='disabled'/></form></div></div>                                                            
+                                
+                      
+                      <div id="1725" class="box_product"><table id="box_title_1725" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX162-2</td></tr></table><div class="box_content_product" id="content_1725"><div class='product_details'><ul class='list'><li class='list'>AMD EPYC™ 9454P 48-Core "Genoa" (Zen4)</li><li class='list'>256 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax162?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 1,004.36</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.6095</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 498.61</span></td>
+             </tr></table><hr /><form id="order_1725" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX162-2', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1725" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1757" class="box_product"><table id="box_title_1757" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX162-2-LTD</td></tr></table><div class="box_content_product" id="content_1757"><div class='product_details'><ul class='list'><li class='list'>AMD EPYC™ 9454P 48-Core "Genoa" (Zen4)</li><li class='list'>256 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax162?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 379.61</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.6083</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 46.41</span></td>
+             </tr></table><hr /><form id="order_1757" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX162-2-LTD', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1757" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button' type='button' value='Not available' disabled='disabled'/></form></div></div>                                                            
+                                
+                      
+                      <div id="1726" class="box_product"><table id="box_title_1726" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX162-3</td></tr></table><div class="box_content_product" id="content_1726"><div class='product_details'><ul class='list'><li class='list'>AMD EPYC™ 9454P 48-Core "Genoa" (Zen4)</li><li class='list'>512 GB DDR5 ECC reg. RAM</li><li class='list'>4 x 3.84 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax162?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 1,902.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 3.0494</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 950.81</span></td>
+             </tr></table><hr /><form id="order_1726" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX162-3', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1726" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1766" class="box_product"><table id="box_title_1766" class="box_title_no_hover"><tr><td class="title">Dedicated Server AX162-4</td></tr></table><div class="box_content_product" id="content_1766"><div class='product_details'><ul class='list'><li class='list'>AMD EPYC™ 9454P 48-Core "Genoa" (Zen4)</li><li class='list'>256 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4)</li><li class='list'>2 x 15.36 TB NVMe SSD Datacenter Edition (Gen 4)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ax162?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 1,307.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 2.0958</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 653.31</span></td>
+             </tr></table><hr /><form id="order_1766" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server AX162-4', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1766" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                  
+                  </div></div>              
+                                                      
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                  
+              
+                                                      
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                  
+              
+                                                      
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                        <div class="sm_list liste" ><a name="dedicated_servers_ex_intel_alder_lake" class='down' onclick="toggleFeature(jQuery(this),'content_productline_dedicated_servers_ex_intel_alder_lake')"><dt><span class='title'>Dedicated Servers EX (Intel Alder Lake)</span></dt></a><div class="box_content_dedicated_servers_ex_intel_alder_lake" style="display:none;" id="content_productline_dedicated_servers_ex_intel_alder_lake">                                    
+                      <div id="1769" class="box_product"><table id="box_title_1769" class="box_title_no_hover"><tr><td class="title">Dedicated GPU-Server GEX430-1</td></tr></table><div class="box_content_product" id="content_1769"><div class='product_details'><ul class='list'><li class='list'>Intel® Xeon® Gold 5412U 24-Core "Sapphire Rapids"</li><li class='list'>128 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>4x NVIDIA RTX™ PRO 6000 Blackwell Max-Q</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/gex430?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 4,282.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 6.8634</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 4,282.81</span></td>
+             </tr></table><hr /><form id="order_1769" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated GPU-Server GEX430-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1769" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                  
+                  </div></div>              
+                                                      
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                        <div class="sm_list liste" ><a name="dedicated_servers_ex_intel_raptor_lake" class='down' onclick="toggleFeature(jQuery(this),'content_productline_dedicated_servers_ex_intel_raptor_lake')"><dt><span class='title'>Dedicated Servers EX (Intel Raptor Lake)</span></dt></a><div class="box_content_dedicated_servers_ex_intel_raptor_lake" style="display:none;" id="content_productline_dedicated_servers_ex_intel_raptor_lake">                                    
+                      <div id="1728" class="box_product"><table id="box_title_1728" class="box_title_no_hover"><tr><td class="title">Dedicated Server EX44-1-LTD</td></tr></table><div class="box_content_product" id="content_1728"><div class='product_details'><ul class='list'><li class='list'>Intel&reg; Core&trade; i5-13500 14 Core "Raptor Lake-S"</li><li class='list'>64 GB DDR4 RAM</li><li class='list'>2 x 512 GB NVMe SSD (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ex44?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 70.21</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.1125</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 0.00</span></td>
+             </tr></table><hr /><form id="order_1728" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server EX44-1-LTD', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1728" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button' type='button' value='Not available' disabled='disabled'/></form></div></div>                                                            
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                  
+                  </div></div>              
+                                                      
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                  
+              
+                                                      
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                        <div class="sm_list liste" ><a name="dedicated_servers_ex_intel_granite_rapids" class='down' onclick="toggleFeature(jQuery(this),'content_productline_dedicated_servers_ex_intel_granite_rapids')"><dt><span class='title'>Dedicated Servers EX (Intel Granite Rapids)</span></dt></a><div class="box_content_dedicated_servers_ex_intel_granite_rapids" style="display:none;" id="content_productline_dedicated_servers_ex_intel_granite_rapids">                                    
+                      <div id="1733" class="box_product"><table id="box_title_1733" class="box_title_no_hover"><tr><td class="title">Dedicated Server EX131-1</td></tr></table><div class="box_content_product" id="content_1733"><div class='product_details'><ul class='list'><li class='list'>Intel&reg; Xeon&reg; 6731P 32-Core "Granite Rapids"</li><li class='list'>128 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 5, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ex131?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 665.21</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.0660</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 332.01</span></td>
+             </tr></table><hr /><form id="order_1733" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server EX131-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1733" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1736" class="box_product"><table id="box_title_1736" class="box_title_no_hover"><tr><td class="title">Dedicated Server EX131-1-LTD</td></tr></table><div class="box_content_product" id="content_1736"><div class='product_details'><ul class='list'><li class='list'>Intel&reg; Xeon&reg; 6731P 32-Core "Granite Rapids"</li><li class='list'>128 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 5, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ex131?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 320.11</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.5130</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 46.41</span></td>
+             </tr></table><hr /><form id="order_1736" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server EX131-1-LTD', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1736" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button' type='button' value='Not available' disabled='disabled'/></form></div></div>                                                            
+                                
+                      
+                      <div id="1734" class="box_product"><table id="box_title_1734" class="box_title_no_hover"><tr><td class="title">Dedicated Server EX131-2</td></tr></table><div class="box_content_product" id="content_1734"><div class='product_details'><ul class='list'><li class='list'>Intel&reg; Xeon&reg; 6731P 32-Core "Granite Rapids"</li><li class='list'>256 GB DDR5 ECC reg. RAM</li><li class='list'>4 x 3.84 TB NVMe SSD Datacenter Edition (Gen 5, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ex131?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 1,284.01</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 2.0576</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 641.41</span></td>
+             </tr></table><hr /><form id="order_1734" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server EX131-2', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1734" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1758" class="box_product"><table id="box_title_1758" class="box_title_no_hover"><tr><td class="title">Dedicated Server EX131-2-LTD</td></tr></table><div class="box_content_product" id="content_1758"><div class='product_details'><ul class='list'><li class='list'>Intel&reg; Xeon&reg; 6731P 32-Core "Granite Rapids"</li><li class='list'>256 GB DDR5 ECC reg. RAM</li><li class='list'>4 x 3.84 TB NVMe SSD Datacenter Edition (Gen 5, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ex131?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 611.66</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.9802</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 58.31</span></td>
+             </tr></table><hr /><form id="order_1758" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server EX131-2-LTD', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1758" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button' type='button' value='Not available' disabled='disabled'/></form></div></div>                                                            
+                                
+                      
+                      <div id="1735" class="box_product"><table id="box_title_1735" class="box_title_no_hover"><tr><td class="title">Dedicated Server EX131-3</td></tr></table><div class="box_content_product" id="content_1735"><div class='product_details'><ul class='list'><li class='list'>Intel&reg; Xeon&reg; 6731P 32-Core "Granite Rapids"</li><li class='list'>256 GB DDR5 ECC reg. RAM</li><li class='list'>4 x 7.86 TB NVMe SSD Datacenter Edition (Gen 5, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ex131?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 1,664.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 2.6680</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 831.81</span></td>
+             </tr></table><hr /><form id="order_1735" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server EX131-3', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1735" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                  
+                  </div></div>              
+                                                      
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                        <div class="sm_list liste" ><a name="dedicated_servers_ex_intel_arrow_lake" class='down' onclick="toggleFeature(jQuery(this),'content_productline_dedicated_servers_ex_intel_arrow_lake')"><dt><span class='title'>Dedicated Servers EX (Intel Arrow Lake)</span></dt></a><div class="box_content_dedicated_servers_ex_intel_arrow_lake" style="display:none;" id="content_productline_dedicated_servers_ex_intel_arrow_lake">                                    
+                      <div id="1729" class="box_product"><table id="box_title_1729" class="box_title_no_hover"><tr><td class="title">Dedicated Server EX63-1</td></tr></table><div class="box_content_product" id="content_1729"><div class='product_details'><ul class='list'><li class='list'>Intel&reg; Core&trade; Ultra 7 265</li><li class='list'>64 GB DDR5 UDIMM</li><li class='list'>2 x 1 TB NVMe SSD M.2</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ex63?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 177.31</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.2842</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 88.06</span></td>
+             </tr></table><hr /><form id="order_1729" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server EX63-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1729" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1730" class="box_product"><table id="box_title_1730" class="box_title_no_hover"><tr><td class="title">Dedicated Server EX63-2</td></tr></table><div class="box_content_product" id="content_1730"><div class='product_details'><ul class='list'><li class='list'>Intel&reg; Core&trade; Ultra 7 265</li><li class='list'>192 GB DDR5 ECC reg. UDIMM</li><li class='list'>2 x 1.192 TB NVMe SSD M.2</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ex63?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 641.41</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.0279</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 320.11</span></td>
+             </tr></table><hr /><form id="order_1730" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server EX63-2', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1730" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1731" class="box_product"><table id="box_title_1731" class="box_title_no_hover"><tr><td class="title">Dedicated Server EX63-3</td></tr></table><div class="box_content_product" id="content_1731"><div class='product_details'><ul class='list'><li class='list'>Intel&reg; Core&trade; Ultra 7 265</li><li class='list'>192 GB DDR5 ECC reg. UDIMM</li><li class='list'>4 x 3.84 TB NVMe SSD M.2</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ex63?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 903.21</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.4474</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 451.01</span></td>
+             </tr></table><hr /><form id="order_1731" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server EX63-3', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1731" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1763" class="box_product"><table id="box_title_1763" class="box_title_no_hover"><tr><td class="title">Dedicated Server EX63-4</td></tr></table><div class="box_content_product" id="content_1763"><div class='product_details'><ul class='list'><li class='list'>Intel&reg; Core&trade; Ultra 7 265</li><li class='list'>64 GB DDR5 ECC RAM</li><li class='list'>2 x 1 TB NVMe SSD M.2</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/ex63?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 284.41</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.4558</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 141.61</span></td>
+             </tr></table><hr /><form id="order_1763" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server EX63-4', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1763" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                  
+                  </div></div>              
+                                                      
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                        <div class="sm_list liste" ><a name="dedicated_gpuservers" class='down' onclick="toggleFeature(jQuery(this),'content_productline_dedicated_gpuservers')"><dt><span class='title'>Dedicated GPU-Servers</span></dt></a><div class="box_content_dedicated_gpuservers" style="display:none;" id="content_productline_dedicated_gpuservers">                                    
+                      <div id="1768" class="box_product"><table id="box_title_1768" class="box_title_no_hover"><tr><td class="title">Dedicated GPU-Server GEX45-1</td></tr></table><div class="box_content_product" id="content_1768"><div class='product_details'><ul class='list'><li class='list'>Intel® Core™ i5-13500 14 Core "Raptor Lake-S"</li><li class='list'>64 GB DDR4 RAM</li><li class='list'>2 x 512 GB NVMe SSD (Gen 3, Software RAID 1)</li><li class='list'>NVIDIA RTX™ 4000 SFF Blackwell Generation</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/gex45?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 254.66</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.4081</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 248.71</span></td>
+             </tr></table><hr /><form id="order_1768" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated GPU-Server GEX45-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1768" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1767" class="box_product"><table id="box_title_1767" class="box_title_no_hover"><tr><td class="title">Dedicated Server GEX63-1</td></tr></table><div class="box_content_product" id="content_1767"><div class='product_details'><ul class='list'><li class='list'>Intel® Core™ Ultra 7 265 20-Core "Arrow Lake"</li><li class='list'>128 GB DDR5 RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>NVIDIA RTX™ PRO 6000 Blackwell Max-Q</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/gex63?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 1,188.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.9051</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 1,188.81</span></td>
+             </tr></table><hr /><form id="order_1767" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server GEX63-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1767" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1747" class="box_product"><table id="box_title_1747" class="box_title_no_hover"><tr><td class="title">Dedicated Server GEX131-1</td></tr></table><div class="box_content_product" id="content_1747"><div class='product_details'><ul class='list'><li class='list'>Intel&reg; Xeon&reg; Gold 5412U 24-Core "Sapphire Rapids"</li><li class='list'>256 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 960 GB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>NVIDIA RTX&trade; PRO 6000 Blackwell Max-Q</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/gex131?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 1,783.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 2.8586</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 1,783.81</span></td>
+             </tr></table><hr /><form id="order_1747" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server GEX131-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1747" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1748" class="box_product"><table id="box_title_1748" class="box_title_no_hover"><tr><td class="title">Dedicated Server GEX131-2</td></tr></table><div class="box_content_product" id="content_1748"><div class='product_details'><ul class='list'><li class='list'>Intel&reg; Xeon&reg; Gold 5412U 24-Core "Sapphire Rapids"</li><li class='list'>512 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>NVIDIA RTX&trade; PRO 6000 Blackwell Max-Q</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/gex131?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 2,497.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 4.0029</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 2,497.81</span></td>
+             </tr></table><hr /><form id="order_1748" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server GEX131-2', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1748" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1749" class="box_product"><table id="box_title_1749" class="box_title_no_hover"><tr><td class="title">Dedicated Server GEX131-3</td></tr></table><div class="box_content_product" id="content_1749"><div class='product_details'><ul class='list'><li class='list'>Intel&reg; Xeon&reg; Gold 5412U 24-Core "Sapphire Rapids"</li><li class='list'>768 GB DDR5 ECC reg. RAM</li><li class='list'>4 x 3.84 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>NVIDIA RTX&trade; PRO 6000 Blackwell Max-Q</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/gex131?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 3,211.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 5.1471</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 3,211.81</span></td>
+             </tr></table><hr /><form id="order_1749" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server GEX131-3', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1749" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1769" class="box_product"><table id="box_title_1769" class="box_title_no_hover"><tr><td class="title">Dedicated GPU-Server GEX430-1</td></tr></table><div class="box_content_product" id="content_1769"><div class='product_details'><ul class='list'><li class='list'>Intel® Xeon® Gold 5412U 24-Core "Sapphire Rapids"</li><li class='list'>128 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>4x NVIDIA RTX™ PRO 6000 Blackwell Max-Q</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/gex430?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 4,282.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 6.8634</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 4,282.81</span></td>
+             </tr></table><hr /><form id="order_1769" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated GPU-Server GEX430-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1769" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                  
+                  </div></div>              
+                                                      
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                  
+              
+                                                      
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                  
+                  <div class="sm_list liste" ><a name="dedicated_servers_rx" class='down' onclick="toggleFeature(jQuery(this),'content_productline_dedicated_servers_rx')"><dt><span class='title'>Dedicated Servers RX</span></dt></a><div class="box_content_dedicated_servers_rx" style="display:none;" id="content_productline_dedicated_servers_rx"><blockquote id="msgbox" class="msgbox_info"><p>These server models are not available at this time.</p></blockquote></div></div>              
+                                                      
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                        <div class="sm_list liste" ><a name="dedicated_servers_sx" class='down' onclick="toggleFeature(jQuery(this),'content_productline_dedicated_servers_sx')"><dt><span class='title'>Dedicated Servers SX</span></dt></a><div class="box_content_dedicated_servers_sx" style="display:none;" id="content_productline_dedicated_servers_sx">                                    
+                      <div id="1738" class="box_product"><table id="box_title_1738" class="box_title_no_hover"><tr><td class="title">Dedicated Server SX65-1</td></tr></table><div class="box_content_product" id="content_1738"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen™ 7 3700X "Matisse" (Zen2)</li><li class='list'>64 GB DDR4 ECC RAM</li><li class='list'>2 x 1 TB NVMe SSD (Gen 3)</li><li class='list'>4 x 22 TB SATA HDD</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/sx65?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 326.06</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.5225</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 159.46</span></td>
+             </tr></table><hr /><form id="order_1738" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server SX65-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1738" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1737" class="box_product"><table id="box_title_1737" class="box_title_no_hover"><tr><td class="title">Dedicated Server SX65-2</td></tr></table><div class="box_content_product" id="content_1737"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen™ 7 3700X "Matisse" (Zen2)</li><li class='list'>64 GB DDR4 ECC RAM</li><li class='list'>4 x 16 TB SATA HDD</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/sx65?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 99.96</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.1602</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 46.41</span></td>
+             </tr></table><hr /><form id="order_1737" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server SX65-2', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1737" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1739" class="box_product"><table id="box_title_1739" class="box_title_no_hover"><tr><td class="title">Dedicated Server SX65-3</td></tr></table><div class="box_content_product" id="content_1739"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen™ 7 3700X "Matisse" (Zen2)</li><li class='list'>128 GB DDR4 ECC RAM</li><li class='list'>2 x 1 TB NVMe SSD (Gen 3)</li><li class='list'>4 x 22 TB SATA HDD</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/sx65?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 349.86</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.5606</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 171.36</span></td>
+             </tr></table><hr /><form id="order_1739" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server SX65-3', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1739" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1742" class="box_product"><table id="box_title_1742" class="box_title_no_hover"><tr><td class="title">Dedicated Server SX135-1</td></tr></table><div class="box_content_product" id="content_1742"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen™ 9 3900 12-Core "Matisse" (Zen2)</li><li class='list'>128 GB DDR4 ECC RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 3)</li><li class='list'>8 x 22 TB SATA HDD</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/sx135?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 534.31</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.8562</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 266.56</span></td>
+             </tr></table><hr /><form id="order_1742" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server SX135-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1742" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1741" class="box_product"><table id="box_title_1741" class="box_title_no_hover"><tr><td class="title">Dedicated Server SX135-2</td></tr></table><div class="box_content_product" id="content_1741"><div class='product_details'><ul class='list'><li class='list'>AMD Ryzen™ 9 3900 12-Core "Matisse" (Zen2)</li><li class='list'>128 GB DDR4 ECC RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 3)</li><li class='list'>8 x 16 TB SATA HDD</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/sx135?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 343.91</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 0.5511</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 171.36</span></td>
+             </tr></table><hr /><form id="order_1741" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server SX135-2', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1741" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1744" class="box_product"><table id="box_title_1744" class="box_title_no_hover"><tr><td class="title">Dedicated Server SX295-1</td></tr></table><div class="box_content_product" id="content_1744"><div class='product_details'><ul class='list'><li class='list'>AMD EPYC™ 7502P 32-Core "Rome" (Zen2)</li><li class='list'>256 GB DDR4 ECC reg. RAM</li><li class='list'>2 x 7.68 TB (Gen4) NVMe SSD</li><li class='list'>14 x 22 TB SATA HDD</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/sx295?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 1,046.01</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.6762</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 522.41</span></td>
+             </tr></table><hr /><form id="order_1744" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dedicated Server SX295-1', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1744" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                              
+                  </div></div>              
+                                                      
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                        <div class="sm_list liste" ><a name="dell_poweredge" class='down' onclick="toggleFeature(jQuery(this),'content_productline_dell_poweredge')"><dt><span class='title'>Dell PowerEdge™</span></dt></a><div class="box_content_dell_poweredge" style="display:none;" id="content_productline_dell_poweredge">                                    
+                      <div id="1708" class="box_product"><table id="box_title_1708" class="box_title_no_hover"><tr><td class="title">Dell PowerEdge™ R470 DX154-1 (17. Generation)</td></tr></table><div class="box_content_product" id="content_1708"><div class='product_details'><ul class='list'><li class='list'>Intel® Xeon® Gold 6741P 48-Core "Granite Rapids"</li><li class='list'>128 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 960 GB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/dx154-1?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 837.76</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.3426</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 415.31</span></td>
+             </tr></table><hr /><form id="order_1708" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dell PowerEdge™ R470 DX154-1 (17. Generation)', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1708" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1709" class="box_product"><table id="box_title_1709" class="box_title_no_hover"><tr><td class="title">Dell PowerEdge™ R470 DX154-2 (17. Generation)</td></tr></table><div class="box_content_product" id="content_1709"><div class='product_details'><ul class='list'><li class='list'>Intel® Xeon® Gold 6741P 48-Core "Granite Rapids"</li><li class='list'>256 GB DDR5 ECC reg. RAM</li><li class='list'>4 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/dx154-2?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 1,075.76</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.7240</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 534.31</span></td>
+             </tr></table><hr /><form id="order_1709" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dell PowerEdge™ R470 DX154-2 (17. Generation)', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1709" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1710" class="box_product"><table id="box_title_1710" class="box_title_no_hover"><tr><td class="title">Dell PowerEdge™ R470 DX294-1 (17. Generation)</td></tr></table><div class="box_content_product" id="content_1710"><div class='product_details'><ul class='list'><li class='list'>Intel® Xeon® Gold 6787P 86-Core "Granite Rapids"</li><li class='list'>256 GB DDR5 ECC reg. RAM</li><li class='list'>2 x 960 GB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/dx294-1?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 1,093.61</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.7525</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 546.21</span></td>
+             </tr></table><hr /><form id="order_1710" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dell PowerEdge™ R470 DX294-1 (17. Generation)', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1710" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1711" class="box_product"><table id="box_title_1711" class="box_title_no_hover"><tr><td class="title">Dell PowerEdge™ R470 DX294-2 (17. Generation)</td></tr></table><div class="box_content_product" id="content_1711"><div class='product_details'><ul class='list'><li class='list'>Intel® Xeon® Gold 6787P 86-Core "Granite Rapids"</li><li class='list'>512 GB DDR5 ECC reg. RAM</li><li class='list'>4 x 1.92 TB NVMe SSD Datacenter Edition (Gen 4, Software RAID 1)</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/dx294-2?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 1,545.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 2.4772</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 772.31</span></td>
+             </tr></table><hr /><form id="order_1711" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dell PowerEdge™ R470 DX294-2 (17. Generation)', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1711" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1750" class="box_product"><table id="box_title_1750" class="box_title_no_hover"><tr><td class="title">Dell PowerEdge™ R6615 DX182-1 (16. Generation)</td></tr></table><div class="box_content_product" id="content_1750"><div class='product_details'><ul class='list'><li class='list'>AMD EPYC&reg; 9454P 48-Core "Genoa" (Zen4)</li><li class='list'>128 GB DDR5 ECC RAM</li><li class='list'>2 x 1.92 TB NVMe SSD Datacenter Edition (Gen 3)</li><li class='list'>Redundant power supply</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/dx182?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 861.56</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 1.3806</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 427.21</span></td>
+             </tr></table><hr /><form id="order_1750" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dell PowerEdge™ R6615 DX182-1 (16. Generation)', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1750" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1751" class="box_product"><table id="box_title_1751" class="box_title_no_hover"><tr><td class="title">Dell PowerEdge™ R6615 DX182-2 (16. Generation)</td></tr></table><div class="box_content_product" id="content_1751"><div class='product_details'><ul class='list'><li class='list'>AMD EPYC&reg; 9454P 48-Core "Genoa" (Zen4)</li><li class='list'>256 GB DDR5 ECC RAM</li><li class='list'>4 x 3.84 TB NVMe SSD Datacenter Edition (Gen 3)</li><li class='list'>Redundant power supply</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/dx182?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 1,426.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 2.2865</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 712.81</span></td>
+             </tr></table><hr /><form id="order_1751" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dell PowerEdge™ R6615 DX182-2 (16. Generation)', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1751" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                      
+                      <div id="1752" class="box_product"><table id="box_title_1752" class="box_title_no_hover"><tr><td class="title">Dell PowerEdge™ R6615 DX182-3 (16. Generation)</td></tr></table><div class="box_content_product" id="content_1752"><div class='product_details'><ul class='list'><li class='list'>AMD EPYC&reg; 9454P 48-Core "Genoa" (Zen4)</li><li class='list'>512 GB DDR5 ECC RAM</li><li class='list'>4 x 7.68 TB NVMe SSD Datacenter Edition (Gen 3)</li><li class='list'>Redundant power supply</li><li class='list'>1 Gbit/s bandwidth</li></ul><a href="https://www.hetzner.com/dedicated-rootserver/dx182?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>max. per month:</td>
+               <td>from <span class="price price_small">€ 2,497.81</span></td>
+             </tr><tr>
+                 <td>per hour:</td>
+                 <td>from <span class="price_smaller">€ 4.0028</span></td>
+               </tr><tr>
+               <td>once-off setup:</td>
+               <td><span class="price_smaller">€ 1,248.31</span></td>
+             </tr></table><hr /><form id="order_1752" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Dell PowerEdge™ R6615 DX182-3 (16. Generation)', 'Robot']);" method="post" action="/order/server"><input type="hidden" name="product" id="product" value="1752" /><input type="hidden" name="category" id="category" value="rootserver" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                                                            
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                                                
+                                
+                  
+                  </div></div>                      </dl>
+  
+  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+  
+    </div></div>    <div style="clear:both;"></div>
+  
+  
+  
+        
+    <div id="products_domain" class="box_domain"><table id="box_title_products_domain" class="box_title_no_hover"><tr><td class="title">Domain Administration</td></tr></table><div class="box_content_domain" id="content_products_domain">          <dl>
+            
+                                                                
+                                        <div class="sm_list liste" ><a name="domain_administration" class='down' onclick="toggleFeature(jQuery(this),'content_productline_domain_administration')"><dt><span class='title'>Domain Administration</span></dt></a><div class="box_content_domain_administration" style="display:none;" id="content_productline_domain_administration">                                    
+                      <div id="domain_robot" class="box_product"><table id="box_title_domain_robot" class="box_title_no_hover"><tr><td class="title">Domain Robot</td></tr></table><div class="box_content_product" id="content_domain_robot"><div class='product_details'><ul class='list'><li class='list'>Register and maintain domains (.de, .com, .net, .org, .info, .biz, .eu, .at)</li><li class='list'>Start domain transfers</li><li class='list'>Administer WHOIS data</li></ul><a href="https://www.hetzner.com/registrationrobot?currency=EUR">more information...</a></div><hr /><table class="price_table"><tr>
+               <td>Price (once):</td>
+               <td><span class="price price_small">€ 0.00</td>
+             </tr></table><hr /><form id="order_domain_robot" onsubmit="_paq.push(['trackEvent', 'Order', 'Order Product Domain Robot', 'Robot']);" method="post" action="/order/robot"><input type="hidden" name="product" id="product" value="domain_robot" /><input type="hidden" name="category" id="category" value="domain" /><input class='button calltoaction' type='submit' value='Order product'  /></form></div></div>                              
+                  </div></div>                      </dl>
+  
+  
+                                      
+  
+    </div></div>    <div style="clear:both;"></div>
+  
+                        <!--End of content -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!--Start of footer -->
+      <footer id="footer" class="d-flex flex-column flex-xl-row justify-content-center justify-content-lg-end align-items-center">
+  <div class="container-fluid py-2">
+    <div class="row">
+      <div class="col-12">
+        <div style="width: 100%;">
+          <a onclick="var w=window.open(this.href);w.focus();return false;" href="https://www.hetzner.com/rechtliches/impressum?currency=EUR">Legal</a>&nbsp;&nbsp;
+          <a onclick="var w=window.open(this.href);w.focus();return false;" href="https://www.hetzner.com/rechtliches/datenschutz?currency=EUR">Data Privacy</a>&nbsp;&nbsp;
+          <a onclick="var w=window.open(this.href);w.focus();return false;" href="https://www.hetzner.com/rechtliches/system-policies?currency=EUR">System Policies</a>          &nbsp;&nbsp;
+          <a onclick="var w=window.open(this.href);w.focus();return false;" href="https://www.hetzner.com/rechtliches/agb?currency=EUR">Terms and Conditions</a>            Prices incl. 19 % VAT &nbsp;&nbsp;
+          &copy; 2026 Hetzner Online GmbH. All Rights Reserved.
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+      <!--End footer-->
+    </div>
+  </div>
+</div>
+</body>
+</html>
